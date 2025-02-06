@@ -9,9 +9,9 @@ import org.testng.annotations.Test;
 public class Testcase3 {
 	@Test
 	public void Adding_to_cart() {
-		EdgeOptions options = new EdgeOptions();
-		options.addArguments("--inprivate");
-		WebDriver driver = new EdgeDriver(options);
+		//EdgeOptions options = new EdgeOptions();
+		//options.addArguments("--inprivate");
+		WebDriver driver = new EdgeDriver();
 		driver.manage().window().maximize();
 		driver.get("https://www.amazon.in/");
 		HOmePage h = new HOmePage(driver);
@@ -29,10 +29,10 @@ public class Testcase3 {
 
 		a.shoe_product(driver);
 
-		AddtoCart a1 = new AddtoCart(driver);
-		a1.add_to_cart();
-		a1.item_in_cart();
-		a1.product_increment();
+		Cart c = new Cart(driver);
+		c.cart();
+		c.item_in_cart();
+		c.product_increment();
 
 		h.hoverover_signout(driver);
 		h.sign_out();

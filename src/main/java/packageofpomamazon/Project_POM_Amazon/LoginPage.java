@@ -1,9 +1,13 @@
 package packageofpomamazon.Project_POM_Amazon;
 
+import java.time.Duration;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class LoginPage {
 	WebDriver driver;
@@ -28,7 +32,8 @@ public class LoginPage {
 		continue_button.click();
 	}
 	public void password() {
-		pass.sendKeys("Tejas@2025");
+		WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(10));
+		wait.until(ExpectedConditions.elementToBeClickable(pass)).sendKeys("Tejas@2025");
 	}
 	public void pass_submit() {
 		pass_button.click();

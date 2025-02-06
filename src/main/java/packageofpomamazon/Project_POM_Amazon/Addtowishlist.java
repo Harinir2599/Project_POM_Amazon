@@ -1,5 +1,6 @@
 package packageofpomamazon.Project_POM_Amazon;
 
+import java.time.Duration;
 import java.util.Iterator;
 import java.util.Set;
 
@@ -41,9 +42,8 @@ public class Addtowishlist {
 	}
 	
 	public void view_list_button() {
-		
-		
-		view_list.click();
+		WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(10));
+		wait.until(ExpectedConditions.elementToBeClickable(view_list)).click();
 	}
 	public Addtowishlist( WebDriver driver) {
 		

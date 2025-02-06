@@ -9,8 +9,8 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class AddtoCart {
-	WebDriver driver;
+public class Cart {
+WebDriver driver;
 	
 	@FindBy(id="add-to-cart-button")
 	WebElement cart_button;
@@ -21,7 +21,7 @@ public class AddtoCart {
 	@FindBy(id="//button[@aria-label='Increase quantity by one']")
 	WebElement increment;
 	
-	public void add_to_cart() {
+	public void cart() {
 		cart_button.click();
 	}
 	public void item_in_cart() {
@@ -31,9 +31,9 @@ public class AddtoCart {
 		WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(20));
 		wait.until(ExpectedConditions.elementToBeClickable(increment)).click();
 	}
-	public AddtoCart(WebDriver driver) {
+	
+	public Cart(WebDriver driver) {
+		// TODO Auto-generated constructor stub
 		PageFactory.initElements(driver, this);
-		
 	}
-
 }

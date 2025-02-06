@@ -8,7 +8,7 @@ import org.testng.annotations.Test;
 public class TestCase1 {
 	@Test
 	public void logintoamazon_search_logout() {
-		WebDriver driver = new ChromeDriver();
+		WebDriver driver = new EdgeDriver();
 		driver.manage().window().maximize();
 		driver.get("https://www.amazon.in/");
 		HOmePage h = new HOmePage(driver);

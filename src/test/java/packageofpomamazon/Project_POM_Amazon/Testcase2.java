@@ -16,9 +16,9 @@ import org.testng.annotations.Test;
 public class Testcase2 {
 	
 	public void product_wishlist() {
-		EdgeOptions options = new EdgeOptions();
-		options.addArguments("--inprivate");
-		WebDriver driver = new EdgeDriver(options);
+		//EdgeOptions options = new EdgeOptions();
+		//options.addArguments("--inprivate");
+		WebDriver driver = new EdgeDriver();
 		
 		driver.manage().window().maximize();
 		driver.get("https://www.amazon.in/");

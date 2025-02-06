@@ -25,7 +25,7 @@ public class HOmePage {
 	
 	//step 2
 	public void searching() {
-		searchtf.sendKeys("shoe"+Keys.ENTER);
+		searchtf.sendKeys("lipstick"+Keys.ENTER);
 	}
 	 
 	
